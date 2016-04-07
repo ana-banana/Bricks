@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="#4486bc">
+
+    <TextView
+        android:layout_width="319dp"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/textView_activity_rules"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.39"
+        android:textColor="#d3e8f5" />
+</LinearLayout>
