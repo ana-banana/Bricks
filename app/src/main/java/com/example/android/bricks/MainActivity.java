@@ -14,7 +14,7 @@ import android.widget.Button;
 //import android.widget.GridView;
 //import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
 //   GridView gridView;
 
@@ -36,47 +36,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
         Button myLevelsButton = (Button)findViewById(R.id.button_levels);
-        myLevelsButton.setOnClickListener(this);
+       // myLevelsButton.setOnClickListener(new setOn);
 
-    /*    myLevelsButton.setOnClickListener(
+        myLevelsButton.setOnClickListener(
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, PlayButton.class);
+
+                        Intent intent = new Intent(MainActivity.this, LevelsButton.class);
                         startActivity(intent);
                     }
                 }
-        ); */
+        );
 
-    //    gridView = (GridView)findViewById(R.id.activity_main_gridView);
-    //    gridView.setAdapter(new ImageAdapter(this));
-    //    gridView.setOnClickListener(this);
+        Button myPlayButton = (Button)findViewById(R.id.button_play);
+        myPlayButton.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(MainActivity.this, AnimationCanvasActivity.class);
+                        intent.putExtra("MessageLevel", getString(R.string.levelOne));
+                        startActivity(intent);
+                    }
+                }
+        );
     }
-
-/*
-
-    @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if (parent.getId()==R.id.activity_main_gridView) {
-
-            switch (position) {
-
-                case 0: {
-                    startActivity(new Intent(this,AnimationActivity.class));
-                    break;
-                }
-                case 1: {
-                    startActivity(new Intent(this, PlayButton.class));
-                    break;
-                }
-                default: {
-                    Toast.makeText(getApplicationContext(), "No action associated with this item.", Toast.LENGTH_LONG).show();
-                    break;
-                }
-            }
-
-        }
-    } */
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -96,40 +81,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (id == R.id.action_settings) {
             return true;
         }
-
         if (id == R.id.action_rules) {
             Intent intentRules = new Intent(this, RulesActivity.class);
-            intentRules.putExtra("Message", "Do not let the ball drop by bouncing it off your bar thing at the bottom. " +
-                    "The different colors of the bricks means how many times you have to hit them.");
+            intentRules.putExtra("Message", "Do not let the ball drop by bouncing it off the paddle.");
             startActivity(intentRules);
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.button_levels: {
-                Intent intent = new Intent(this, AnimationCanvasActivity.class);
-                startActivity(intent);
-            }
-        }
-    }
-
-
-
-  public void sendMessage(View view) {
-        switch(view.getId()){
-            case R.id.button_play: {
-                Intent intent = new Intent(this.getString(R.string.CUSTOM_ACTION_PLAYBUTTON));
-                startActivity(intent);
-                break;
-            }
-        }
-    }
-
-
 
 }

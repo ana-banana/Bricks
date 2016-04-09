@@ -21,9 +21,9 @@
 
         <activity android:name=".RulesActivity"></activity>
 
-        <activity android:name=".PlayButton">
+        <activity android:name=".LevelsButton">
             <intent-filter>
-                <action android:name="android.intent.action.PLAYBUTTON"/>
+                <action android:name="android.intent.action.LEVELSBUTTON"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
@@ -37,6 +37,7 @@
 
         <activity android:name=".AnimationActivity">
             <intent-filter>
+
                 <action android:name="android.intent.action.ANIMATION"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>

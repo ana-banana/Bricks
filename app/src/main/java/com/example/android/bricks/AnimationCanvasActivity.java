@@ -10,11 +10,28 @@ import android.view.MotionEvent;
 public class AnimationCanvasActivity extends Activity {
 
     Activity_AnimationCanvas_Layout  animationCanvas_LayoutView;
+    int level;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        animationCanvas_LayoutView = new Activity_AnimationCanvas_Layout(this);
+
+        Bundle extras = getIntent().getExtras();
+        switch (extras.getString("MessageLevel")) {
+            case " Level One   ":
+                level = 1;
+                break;
+            case " Level Two   ":
+                level = 2;
+                break;
+            case " Level Three ":
+                level = 3;
+                break;
+            case " Level Four   ":
+                level = 4;
+                break;
+        }
+        animationCanvas_LayoutView = new Activity_AnimationCanvas_Layout(this, level);
         setContentView(animationCanvas_LayoutView);
     }
 

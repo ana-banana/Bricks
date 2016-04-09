@@ -3,7 +3,12 @@
     <string name="action_settings">Settings</string>
     <string name="action_rules">Game Rules</string>
     
-    <string name="CUSTOM_ACTION_PLAYBUTTON"> android.intent.action.PLAYBUTTON</string>
+    <!--<string name="CUSTOM_ACTION_LEVELSBUTTON"> android.intent.action.LEVELSBUTTON</string>-->
     <string name="brick_tittle">Brick Breaker Game!</string>
+    <string name="levelOne">  " Level One   "</string>
+    <string name="levelTwo">  " Level Two   "</string>
+    <string name="levelThree">" Level Three "</string>
+    <string name="levelFour"> " Level Four   "</string>
+    <string name="chooseLevels">You can choose a level to start with:</string>
 
 </resources>
