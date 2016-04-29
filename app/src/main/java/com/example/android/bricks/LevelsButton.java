@@ -13,20 +13,11 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import java.util.ArrayList;
 
-/**
- * Created by andrey on 01/03/2016.
- */
 public class LevelsButton extends Activity {
-
-    // GridView gridView;
-
-    // String[] dataLevels = new String[]{"Level One", "Level Two", "Level Three"};
-    // ImageView wallImage1, wallImage2, wallImage3, wallImage4;
-    // ImageView messageImage1, messageImage2, messageImage3, messageImage4;
 
     public class LevelsButtonRow {
         private int levelMessagePic;
